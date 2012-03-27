@@ -6,14 +6,25 @@
     <script src="js/videochat.js"></script>
   </head>
   <body>
-    <div id="echo-videochat"> </div>
+
+    <div id="echo-videochat"></div>
+    <div id="echo-submit"></div>
+    <div id="echo-stream"></div>
+
     <script type="text/javascript">
+      var embed_id = "1embead460bea39c1bb410e7c2d21a82383bee99";
       new Echo.VideoChat({
         "target": document.getElementById("echo-videochat"),
         "appkey": "dev.tokbox",
-        "embed_id": "1embead460bea39c1bb410e7c2d21a82383bee99",
-        "width": 400,
-        "height": 300
+        "embed_id": embed_id,
+        "submitOptions": {
+          "target": document.getElementById("echo-submit"),
+          "targetURL": "http://tokbox.com/"
+        },
+        "streamOptions": {
+          "target": document.getElementById("echo-stream"),
+          "query": "scope:http://tokbox.com/*"
+        }
       });
     </script>
   </body>

@@ -2,9 +2,13 @@ window.Echo = {} unless window.Echo
 Echo.VideoChat = {} unless Echo.VideoChat
 
 class Echo.VideoChat
-  constructor: (@config, @libPath) ->
-    # TODO Check for required parameters
-    # TODO Extend config with some default options
+  constructor: (@config) ->
+    # Check for required vars
+    return unless @config && @config.target && @config.embed_id
+
+    # Set up defaults
+    @config.width or= 350
+    @config.height or= 265
 
     iframe = $("<iframe />", 
       id: "videoEmbed"
@@ -17,28 +21,32 @@ class Echo.VideoChat
     iframe.attr("height", @config.height)
     iframe.attr("width", @config.width)
 
-    ###
-    initSubmitClient = ->
-      console.log Echo.Submit
+    initSubmitClient = =>
+      console.log @config
+      new Echo.Submit @config.submitOptions
 
-    initStreamClient = ->
-      console.log Echo.Stream
+    initStreamClient = =>
+      console.log @config
+      new Echo.Stream @config.streamOptions
 
-    if not Echo.Submit
-      $.ajax
-        url: "http://cdn.echoenabled.com/clientapps/v2/submit.js"
-        dataType: "script"
-        cache: true
-        success: initSubmitClient
-    else
-      initSubmitClient()
+    if @config.submitOptions
+      @config.submitOptions.appkey or= @config.appkey
+      if not Echo.Submit
+        $.ajax
+          url: "http://cdn.echoenabled.com/clientapps/v2/submit.js"
+          dataType: "script"
+          cache: true
+          success: initSubmitClient
+      else
+        initSubmitClient()
 
-    if not Echo.Stream
-      $.ajax
-        url: "http://cdn.echoenabled.com/clientapps/v2/stream.js"
-        dataType: "script"
-        cache: true
-        success: initStreamClient
-    else
-      initStreamClient()
-    ###
+    if @config.streamOptions
+      @config.streamOptions.appkey or= @config.appkey
+      if not Echo.Stream
+        $.ajax
+          url: "http://cdn.echoenabled.com/clientapps/v2/stream.js"
+          dataType: "script"
+          cache: true
+          success: initStreamClient
+      else
+        initStreamClient()
