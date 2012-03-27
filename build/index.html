@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Echo</title>
+    <script src="http://cdn.echoenabled.com/clientapps/v2/jquery-pack.js"></script>
+    <script src="js/videochat.js"></script>
+  </head>
+  <body>
+    <div id="echo-videochat"> </div>
+    <script type="text/javascript">
+      new Echo.VideoChat({
+        "target": document.getElementById("echo-videochat"),
+        "appkey": "dev.tokbox",
+        "embed_id": "1embead460bea39c1bb410e7c2d21a82383bee99",
+        "width": 400,
+        "height": 300
+      });
+    </script>
+  </body>
+</html>
