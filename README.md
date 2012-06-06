@@ -7,10 +7,47 @@ Form](http://wiki.aboutecho.com/w/page/30184446/Echo%20Application%20-%20Echo%20
 
 ## Installation
 1. Include Dependencies
-Echo VideoChat depends on jQuery, the Echo Stream Client, and the Echo Submit Form. You can include all of these with the following script: http://cdn.echoenabled.com/clientapps/v2/jquery-pack.js.
+Echo VideoChat depends on jQuery, the Echo Stream Client, and the Echo Submit Form. You can include all of these with the following:
+
+```html
+<script src="http://cdn.echoenabled.com/clientapps/v2/jquery-pack.js"></script>
+```
   
 2. Include JavaScript
 Include videochat.js on your page.
 
 3. Include CSS (optional)
 If you would like the default style, include videochat.css. You can view the default style [here](http://www.tokbox.com/opentok/plugnplay/echo/groupvideochat). Do not include the CSS file if you would like the app unstyled.
+
+## Example Setup
+This specifies the required HTML elements and then creates a new instances of the Echo.VideoChat class.
+
+```html
+<div id="echo-embed">
+  <div id="echo-videochat"></div>
+  <div id="echo-submit"></div>
+  <div id="echo-stream"></div>
+</div>
+
+<script type="text/javascript">
+  var embed_id = "1embead460bea39c1bb410e7c2d21a82383bee99";
+  new Echo.VideoChat({
+    "target": document.getElementById("echo-videochat"),
+    "appkey": "{{ YOUR ECHO API KEY }}",
+    "embed_id": embed_id,
+    "submitOptions": {
+      "target": document.getElementById("echo-submit"),
+      "targetURL": "{{ YOUR WEBPAGE URL }}"
+    },
+    "streamOptions": {
+      "target": document.getElementById("echo-stream"),
+      "query": "scope:{{ YOUR WEBPAGE URL }}"
+    }
+  });
+</script>
+```
+
+## Configuration
+You can pass in arguments in to `Echo.VideoChat` to customize the embed. These are the configuration options:
+
+`target` (required)
