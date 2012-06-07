@@ -50,4 +50,19 @@ This specifies the required HTML elements and then creates a new instances of th
 ## Configuration
 You can pass in arguments in to `Echo.VideoChat` to customize the embed. These are the configuration options:
 
-`target` (required)
+`target (HTMLElement)` (required)
+The HTMLElement of where you would like the video chat embed to placed.
+
+`appkey (string)` (required)
+Your Echo application key.
+
+`embed_id (string)` (required)
+Your OpenTok Group Chat embed_id. You can set this statically or generate them dynamically. Read below to learn how to get an embed_id.
+
+`submitOptions (Object)` (optional)
+Options to include in the Echo Submit Form. For options visit [here](http://wiki.aboutecho.com/w/page/30184446/Echo%20Application%20-%20Echo%20Submit%20Form)
+
+`streamOptions (Object)` (optional)
+Options to include in the Echo Stream Client. For options visit [here](http://wiki.aboutecho.com/w/page/30181308/Echo%20Application%20-%20Echo%20Stream%20Client).
+
+
