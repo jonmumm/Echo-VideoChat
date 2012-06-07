@@ -1,0 +1,124 @@
+#videoEmbed {
+	position: absolute;
+  width: 400px;;
+  height: 384px;;
+	border: none;
+  top: 0px;
+  left: 0px;
+}
+
+#echo-embed {
+  position: relative;
+}
+
+#echo-submit {
+  position: absolute;
+  width: 216px;
+  top: 0px;
+  left: 400px;
+}
+
+#echo-stream {
+  width: 216px;
+  position: absolute;
+  left: 400px;
+  height: 294px;
+  top: 91px;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.75);
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.75);
+}
+
+.echo-submit-anonymousUserInfoAvatar, .echo-submit-anonymousUserInfoUrlContainer, .echo-item-metadata, .echo-item-date, .echo-item-re, .echo-stream-header, .echo-item-avatar-wrapper {
+  display: none;
+}
+
+.echo-submit-container {
+  padding: 6px 10px;
+  position: relative;
+}
+
+.echo-submit-header {
+  position: absolute;
+}
+
+.echo-submit-body {
+  position: absolute;
+  top: 34px;
+}
+
+.echo-submit-controls {
+  position: absolute;
+  right: 0px;
+  top: 29px;
+}
+
+.echo-submit-postButton  {
+  width: 54px;
+  height: 29px;
+}
+
+.echo-submit-border {
+  padding: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.echo-submit-text-area {
+  height: 32px;
+}
+
+.echo-submit-container input, .echo-submit-container textarea {
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.echo-submit-container input {
+  width: 142px;
+}
+
+.echo-submit-container textarea {
+  width: 142px;
+}
+
+.echo-submit-anonymousUserInfoFieldsWrapper {
+  margin-left: 0;
+}
+
+.echo-item-authorName {
+  color: #09c;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.echo-item-body {
+  padding-top: 0;
+}
+
+.echo-primaryFont {
+  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Regular", "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+}
+
+.echo-primaryColor {
+  color: #777;
+}
+
+.echo-item-container-root {
+  padding: 6px 10px;
+}
+
+.echo-submit-container {
+  margin-top: 4px;
+}
+
+.echo-item-subwrapper {
+  margin-left: 0px;
+}
+
+.echo-button .ui-button {
+  height: 41px;
+  width: 44px;
+  margin-right: 11px;
+}
