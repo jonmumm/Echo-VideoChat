@@ -9,9 +9,9 @@ Form](http://wiki.aboutecho.com/w/page/30184446/Echo%20Application%20-%20Echo%20
 1. Include Dependencies
 Echo VideoChat depends on jQuery, the Echo Stream Client, and the Echo Submit Form. You can include all of these with the following:
 
-```html
-<script src="http://cdn.echoenabled.com/clientapps/v2/jquery-pack.js"></script>
-```
+  ```html
+  <script src="http://cdn.echoenabled.com/clientapps/v2/jquery-pack.js"></script>
+  ```
   
 2. Include JavaScript
 Include videochat.js on your page.
