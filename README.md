@@ -6,17 +6,17 @@ page. It uses the [Echo Stream
 Form](http://wiki.aboutecho.com/w/page/30184446/Echo%20Application%20-%20Echo%20Submit%20Form) and [Submit Client](http://wiki.aboutecho.com/w/page/30181308/Echo%20Application%20-%20Echo%20Stream%20Client) to include a text chat widget. For more information, and a demo, visit the plug-in page [here](http://www.tokbox.com/opentok/plugnplay/echo/groupvideochat).
 
 ## Installation
-1. Include Dependencies
+1. **Include Dependencies**  
 Echo VideoChat depends on jQuery, the Echo Stream Client, and the Echo Submit Form. You can include all of these with the following:
 
   ```html
   <script src="http://cdn.echoenabled.com/clientapps/v2/jquery-pack.js"></script>
   ```
   
-2. Include JavaScript
+2. **Include JavaScript**  
 Include videochat.js on your page.
 
-3. Include CSS (optional)
+3. **Include CSS (optional)**  
 If you would like the default style, include videochat.css. You can view the default style [here](http://www.tokbox.com/opentok/plugnplay/echo/groupvideochat). Do not include the CSS file if you would like the app unstyled.
 
 ## Example Setup
@@ -50,19 +50,19 @@ This specifies the required HTML elements and then creates a new instances of th
 ## Configuration
 You can pass in arguments in to `Echo.VideoChat` to customize the embed. These are the configuration options:
 
-`target (HTMLElement)`
-(required) The HTMLElement of where you would like the video chat embed to placed.
+`target (HTMLElement)` (required)  
+The HTMLElement of where you would like the video chat embed to placed.
 
-`appkey (string)` (required)
+`appkey (string)` (required)  
 Your Echo application key.
 
-`embed_id (string)` (required)
+`embed_id (string)` (required)  
 Your OpenTok Group Chat embed_id. You can set this statically or generate them dynamically. Read below to learn how to get an embed_id.
 
-`submitOptions (Object)` (optional)
+`submitOptions (Object)` (optional)  
 Options to include in the Echo Submit Form. For options visit [here](http://wiki.aboutecho.com/w/page/30184446/Echo%20Application%20-%20Echo%20Submit%20Form). If these options are not included, the plug-in will not display the Echo Submit Form.
 
-`streamOptions (Object)` (optional)
+`streamOptions (Object)` (optional)  
 Options to include in the Echo Stream Client. For options visit [here](http://wiki.aboutecho.com/w/page/30181308/Echo%20Application%20-%20Echo%20Stream%20Client). If these options are not included, the plug-in will not display the Echo Stream Client.
 
 ## Generating an embed_id
